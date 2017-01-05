@@ -210,7 +210,7 @@ class UrlStorage(Storage):
         return urlparse.urlunsplit((scheme, netloc, path, qs, anchor))
 
     def open(self, name, mode='rb'):
-        return urlopen(self.normalize_url(name))
+        return urlopen(name)
 
     def exists(self, name):
         try:
